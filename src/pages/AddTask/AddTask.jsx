@@ -39,7 +39,7 @@ const AddTask = () => {
         console.log(BeATrainer);
     
     
-        fetch('http://localhost:5000/task', {
+        fetch('https://task-management-server-two-black.vercel.app/task', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'

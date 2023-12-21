@@ -12,7 +12,7 @@ const ShowTask = () => {
 
     const [addInfo, setAddInfo] = useState([]);
 
-    const url ="http://localhost:5000/task";
+    const url ="https://task-management-server-two-black.vercel.app/task";
 
     useEffect(() => {
         fetch(url)
@@ -33,7 +33,7 @@ const ShowTask = () => {
             icon: "question"
           });
         if (proceed) {
-            fetch(`http://localhost:5000/task/${id}`, {
+            fetch(`https://task-management-server-two-black.vercel.app/task/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -61,7 +61,7 @@ const ShowTask = () => {
 
 
     const handleBookingConfirm = id => {
-        fetch(`http://localhost:5000/task/${id}`, {
+        fetch(`https://task-management-server-two-black.vercel.app/task/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
